@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.ApiOperation;
 import post.jpa.Diagnosis;
 import post.jpa.Employed;
 import post.jpa.Material;
@@ -63,7 +64,7 @@ public class POSTRestController {
 
 	// Diagnosis //
 
-
+	@ApiOperation(value = "Unos nove dijanoze u bazu podataka")
 	@PostMapping("diagnosis")
 	public ResponseEntity<Diagnosis> insertDiagnosis(@RequestBody Diagnosis diagnosis) {
 		if (diagnosisRepository.existsById(diagnosis.getDiagnosisid()))
@@ -74,7 +75,7 @@ public class POSTRestController {
 
 	// Employed //
 
-
+	@ApiOperation(value = "Unos novog zaposlenog u bazu podataka")
 	@PostMapping("employed")
 	public ResponseEntity<Employed> insertEmployed(@RequestBody Employed employed) {
 		if (employedRepository.existsById(employed.getEmployedid()))
@@ -86,7 +87,7 @@ public class POSTRestController {
 	
 	// Material //
 
-
+	@ApiOperation(value = "Unos novog materijala u bazu podataka")
 	@PostMapping("material")
 	public ResponseEntity<Material> insertMaterial(@RequestBody Material material) {
 		if (materialRepository.existsById(material.getMaterialid()))
@@ -97,7 +98,7 @@ public class POSTRestController {
 
 	// Patient //
 
-
+	@ApiOperation(value = "Unos novog pacijenta u bazu podataka")
 	@PostMapping("patient")
 	public ResponseEntity<Patient> insertPatient(@RequestBody Patient patient) {
 		if (patientRepository.existsById(patient.getPatientid()))
@@ -108,7 +109,7 @@ public class POSTRestController {
 
 	// Performedservice //
 
-
+	@ApiOperation(value = "Unos nove izvrsene usluge u bazu podataka")
 	@PostMapping("performedservice")
 	public ResponseEntity<Performedservice> insertPerformedservice(@RequestBody Performedservice performedservice) {
 		if (performedServiceRepository.existsById(performedservice.getPerformedserviceid()))
@@ -119,7 +120,7 @@ public class POSTRestController {
 
 	// Specialty //
 
-
+	@ApiOperation(value = "Unos nove specijalizacije u bazu podataka")
 	@PostMapping("specialty")
 	public ResponseEntity<Specialty> insertSpecialty(@RequestBody Specialty specialty) {
 		if (specialtyRepository.existsById(specialty.getSpecialtyid()))
@@ -131,7 +132,7 @@ public class POSTRestController {
 
 	// Tooth //
 
-
+	@ApiOperation(value = "Unos novog zuba u bazu podataka")
 	@PostMapping("tooth")
 	public ResponseEntity<Tooth> insertTooth(@RequestBody Tooth tooth) {
 		if (toothRepository.existsById(tooth.getToothid()))
@@ -142,7 +143,7 @@ public class POSTRestController {
 
 	// Toothstatus //
 
-
+	@ApiOperation(value = "Unos novog statusa zuba u bazu podataka")
 	@PostMapping("toothstatus")
 	public ResponseEntity<Toothstatus> insertToothstatus(@RequestBody Toothstatus toothstatus) {
 		if (toothStatusRepository.existsById(toothstatus.getToothstatusid()))
@@ -153,7 +154,7 @@ public class POSTRestController {
 
 	// Typeofservice //
 
-
+	@ApiOperation(value = "Unos nove vrste usluge u bazu podataka")
 	@PostMapping("typeofservice")
 	public ResponseEntity<Typeofservice> insertTypeofservice(@RequestBody Typeofservice typeofservice) {
 		if (typeOfServiceRepository.existsById(typeofservice.getTypeofserviceid()))
@@ -164,7 +165,7 @@ public class POSTRestController {
 
 	// Workplace //
 
-
+	@ApiOperation(value = "Unos novog radnog mesta u bazu podataka")
 	@PostMapping("workplace")
 	public ResponseEntity<Workplace> insertWorkplace(@RequestBody Workplace workplace) {
 		if (workplaceRepository.existsById(workplace.getWorkplaceid()))

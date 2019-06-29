@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.ApiOperation;
 import put.jpa.Tooth;
 import put.jpa.Toothstatus;
 import put.jpa.Typeofservice;
@@ -64,7 +65,7 @@ public class PUTRestController {
 
 	// Diagnosis //
 
-
+	@ApiOperation(value = "Azuriranje dijagnoza u bazi podataka")
 	@PutMapping("diagnosis")
 	public ResponseEntity<Diagnosis> updateDiagnosis(@RequestBody Diagnosis diagnosis) {
 		if (!diagnosisRepository.existsById(diagnosis.getDiagnosisid()))
@@ -75,7 +76,7 @@ public class PUTRestController {
 
 	// Employed //
 
-
+	@ApiOperation(value = "Azuriranje zaposlenih u bazi podataka")
 	@PutMapping("employed")
 	public ResponseEntity<Employed> updateEmployed(@RequestBody Employed employed) {
 		if (!employedRepository.existsById(employed.getEmployedid()))
@@ -86,7 +87,7 @@ public class PUTRestController {
 
 	// Material //
 
-
+	@ApiOperation(value = "Azuriranje materijala u bazi podataka")
 	@PutMapping("material")
 	public ResponseEntity<Material> updateMaterial(@RequestBody Material material) {
 		if (!materialRepository.existsById(material.getMaterialid()))
@@ -97,7 +98,7 @@ public class PUTRestController {
 
 	// Patient //
 
-
+	@ApiOperation(value = "Azuriranje pacijenata u bazi podataka")
 	@PutMapping("patient")
 	public ResponseEntity<Patient> updatePatient(@RequestBody Patient patient) {
 		if (!patientRepository.existsById(patient.getPatientid()))
@@ -108,7 +109,7 @@ public class PUTRestController {
 
 	// Performedservice //
 
-
+	@ApiOperation(value = "Azuriranje izvrsenih usluga u bazi podataka")
 	@PutMapping("performedservice")
 	public ResponseEntity<Performedservice> updatePerformedservice(@RequestBody Performedservice performedservice) {
 		if (!performedServiceRepository.existsById(performedservice.getPerformedserviceid()))
@@ -119,7 +120,7 @@ public class PUTRestController {
 
 	// Specialty //
 
-
+	@ApiOperation(value = "Azuriranje specijalizacija u bazi podataka")
 	@PutMapping("specialty")
 	public ResponseEntity<Specialty> updateSpecialty(@RequestBody Specialty specialty) {
 		if (!specialtyRepository.existsById(specialty.getSpecialtyid()))
@@ -131,7 +132,7 @@ public class PUTRestController {
 
 	// Tooth //
 
-
+	@ApiOperation(value = "Azuriranje zuba u bazi podataka")
 	@PutMapping("tooth")
 	public ResponseEntity<Tooth> updateTooth(@RequestBody Tooth tooth) {
 		if (!toothRepository.existsById(tooth.getToothid()))
@@ -142,7 +143,7 @@ public class PUTRestController {
 
 	// Toothstatus //
 
-
+	@ApiOperation(value = "Azuriranje statusa zuba u bazi podataka")
 	@PutMapping("toothstatus")
 	public ResponseEntity<Toothstatus> updateToothstatus(@RequestBody Toothstatus toothstatus) {
 		if (!toothStatusRepository.existsById(toothstatus.getToothstatusid()))
@@ -153,7 +154,7 @@ public class PUTRestController {
 
 	// Typeofservice //
 
-
+	@ApiOperation(value = "Azuriranje vrsta usluga u bazi podataka")
 	@PutMapping("typeofservice")
 	public ResponseEntity<Typeofservice> updateTypeofservice(@RequestBody Typeofservice typeofservice) {
 		if (!typeOfServiceRepository.existsById(typeofservice.getTypeofserviceid()))
@@ -164,7 +165,7 @@ public class PUTRestController {
 
 	// Workplace //
 
-
+	@ApiOperation(value = "Azuriranje radnih mesta u bazi podataka")
 	@PutMapping("workplace")
 	public ResponseEntity<Workplace> updateWorkplace(@RequestBody Workplace workplace) {
 		if (!workplaceRepository.existsById(workplace.getWorkplaceid()))

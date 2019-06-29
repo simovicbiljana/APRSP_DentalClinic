@@ -29,6 +29,7 @@ import get.reps.ToothRepository;
 import get.reps.ToothstatusRepository;
 import get.reps.TypeofserviceRepository;
 import get.reps.WorkplaceRepository;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 public class GETRestController {
@@ -65,13 +66,13 @@ public class GETRestController {
 
 	// Diagnosis //
 
-
+	@ApiOperation(value = "Vraca kolekciju svih dijagnoza iz baze podataka")
 	@GetMapping("diagnosis")
 	public Collection<Diagnosis> getDiagnosis() {
 		return diagnosisRepository.findAll();
 	}
 
-
+	@ApiOperation(value = "Vraca dijagnoze iz baze podataka ciji je id zadata vrednost")
 	// prosledjena kao path varijabla
 	@GetMapping("diagnosis/{id}")
 	public ResponseEntity <Diagnosis> getDiagnosis(@PathVariable("id") Integer id) {
@@ -81,13 +82,13 @@ public class GETRestController {
 
 	// Employed //
 
-
+	@ApiOperation(value = "Vraca kolekciju svih zaposlenih iz baze podataka")
 	@GetMapping("employed")
 	public Collection <Employed> getEmployes() {
 		return employedRepository.findAll();
 	}
 
-
+	@ApiOperation(value = "Vraca zaposlene iz baze podataka ciji je id zadata vrednost")
 	// vrednost prosledjena kao path varijabla
 	@GetMapping("employed/{id}")
 	public ResponseEntity<Employed> getEmployed(@PathVariable("id") Integer id) {
@@ -95,7 +96,7 @@ public class GETRestController {
 		return new ResponseEntity<Employed>(employed, HttpStatus.OK);
 	}
 
-
+	@ApiOperation(value = "Vraca zaposlenog iz baze podataka cije je prezime zadata vrednost")
 	// prosledjena kao path varijabla
 	@GetMapping("employedlastname/{employedlastname}")
 	public Collection<Employed> getEmployedByLastname(@PathVariable("employedlastname") String employedlastname) {
@@ -104,13 +105,13 @@ public class GETRestController {
 
 	// Material //
 
-
+	@ApiOperation(value = "Vraca kolekciju svih materijala iz baze podataka")
 	@GetMapping("material")
 	public Collection <Material> getMaterials() {
 		return materialRepository.findAll();
 	}
 
-
+	@ApiOperation(value = "Vraca materijale iz baze podataka ciji je id zadata vrednost")
 	// vrednost prosledjena kao path varijabla
 	@GetMapping("material/{id}")
 	public ResponseEntity<Material> getMaterial(@PathVariable("id") Integer id) {
@@ -118,7 +119,7 @@ public class GETRestController {
 		return new ResponseEntity<Material>(material, HttpStatus.OK);
 	}
 
-
+	@ApiOperation(value = "Vraca materijale iz baze podataka ciji je naziv materijala zadata vrednost")
 	// prosledjena kao path varijabla
 	@GetMapping("nameofmaterial/{nameofmaterial}")
 	public Collection<Material> getMaterialByNameofmaterial(@PathVariable("nameofmaterial") String nameofmaterial) {
@@ -127,13 +128,13 @@ public class GETRestController {
 
 	// Patient //
 
-
+	@ApiOperation(value = "Vraca kolekciju svih pacijenata iz baze podataka")
 	@GetMapping("patient")
 	public Collection <Patient> getPatients() {
 		return patientRepository.findAll();
 	}
 
-
+	@ApiOperation(value = "Vraca pacijente iz baze podataka ciji je id zadata vrednost")
 	// vrednost prosledjena kao path varijabla
 	@GetMapping("patient/{id}")
 	public ResponseEntity<Patient> getPatient(@PathVariable("id") Integer id) {
@@ -141,7 +142,7 @@ public class GETRestController {
 		return new ResponseEntity<Patient>(patient, HttpStatus.OK);
 	}
 
-
+	@ApiOperation(value = "Vraca pacijente iz baze podataka cije je prezime zadata vrednost")
 	// prosledjena kao path varijabla
 	@GetMapping("lastname/{lastname}")
 	public Collection<Patient> getPatientByLastname(@PathVariable("lastname") String lastname) {
@@ -150,13 +151,13 @@ public class GETRestController {
 
 	// PerformedService //
 
-
+	@ApiOperation(value = "Vraca kolekciju svih izvrsenih usluga iz baze podataka")
 	@GetMapping("performedservice")
 	public Collection<Performedservice> getPerformedservices() {
 		return performedServiceRepository.findAll();
 	}
 
-
+	@ApiOperation(value = "Vraca izvrsene usluge iz baze podataka ciji je id zadata vrednost")
 	// vrednost prosledjena kao path varijabla
 	@GetMapping("performedservice/{id}")
 	public ResponseEntity<Performedservice> getPerformedservice(@PathVariable("id") Integer id) {
@@ -164,7 +165,7 @@ public class GETRestController {
 		return new ResponseEntity<Performedservice>(performedservice, HttpStatus.OK);
 	}
 
-
+	@ApiOperation(value = "Vraca izvrsene usluge iz baze podataka koja je placena izvrsena usluga zadata vrednost")
 	// prosledjena kao path varijabla
 	@GetMapping("performedservice/{performedservice}")
 	public Collection<Performedservice> getPaidPerformedservice(@PathVariable("performedservice") String performedservice) {
@@ -178,13 +179,13 @@ public class GETRestController {
 
 	// Specialty //
 
-
+	@ApiOperation(value = "Vraca kolekciju svih specijalizacija iz baze podataka")
 	@GetMapping("specialty")
 	public Collection <Specialty> getSpecialties() {
 		return specialtyRepository.findAll();
 	}
 
-
+	@ApiOperation(value = "Vraca specijalizacije iz baze podataka ciji je id zadata vrednost")
 	// vrednost prosledjena kao path varijabla
 	@GetMapping("specialty/{id}")
 	public ResponseEntity<Specialty> getSpecialty(@PathVariable("id") Integer id) {
@@ -192,7 +193,7 @@ public class GETRestController {
 		return new ResponseEntity<Specialty>(specialty, HttpStatus.OK);
 	}
 
-
+	@ApiOperation(value = "Vraca akademske titule iz baze podataka kome je akademska titula zadata vrednost")
 	// prosledjena kao path varijabla
 	@GetMapping("academictitle/{academictitle}")
 	public Collection<Specialty> getSpecialtyByAcademictitle(@PathVariable("academictitle") String academictitle) {
@@ -201,13 +202,13 @@ public class GETRestController {
 
 	// Tooth //
 
-
+	@ApiOperation(value = "Vraca kolekciju svih zuba iz baze podataka")
 	@GetMapping("tooth")
 	public Collection<Tooth> getTeeth() {
 		return toothRepository.findAll();
 	}
 
-
+	@ApiOperation(value = "Vraca zube iz baze podataka ciji je id zadata vrednost")
 	// prosledjena kao path varijabla
 	@GetMapping("tooth/{id}")
 	public ResponseEntity <Tooth> getTooth(@PathVariable("id") Integer id) {
@@ -217,13 +218,13 @@ public class GETRestController {
 
 	// ToothStatus //
 
-
+	@ApiOperation(value = "Vraca kolekciju svih statusa zuba iz baze podataka")
 	@GetMapping("toothstatus")
 	public Collection<Toothstatus> getTeethStatus() {
 		return toothStatusRepository.findAll();
 	}
 
-
+	@ApiOperation(value = "Vraca statuse zuba iz baze podataka ciji je id zadata vrednost")
 	// prosledjena kao path varijabla
 	@GetMapping("toothstatus/{id}")
 	public ResponseEntity <Toothstatus> getToothstatus(@PathVariable("id") Integer id) {
@@ -234,13 +235,13 @@ public class GETRestController {
 
 	// TypeOfService //
 
-
+	@ApiOperation(value = "Vraca kolekciju svih vrsta usluga iz baze podataka")
 	@GetMapping("typeofservice")
 	public Collection<Typeofservice> getTypeofservices() {
 		return typeOfServiceRepository.findAll();
 	}
 
-
+	@ApiOperation(value = "Vraca vrste usluga iz baze podataka ciji je id zadata vrednost")
 	// prosledjena kao path varijabla
 	@GetMapping("typeofservice/{id}")
 	public ResponseEntity <Typeofservice> getTypeofservice(@PathVariable("id") Integer id) {
@@ -250,13 +251,13 @@ public class GETRestController {
 	
 	// Workplace //
 
-
+	@ApiOperation(value = "Vraca kolekciju svih radnih mesta iz baze podataka")
 	@GetMapping("workplace")
 	public Collection <Workplace> getWorkplaces() {
 		return workplaceRepository.findAll();
 	}
 
-
+	@ApiOperation(value = "Vraca radna mesta iz baze podataka ciji je id zadata vrednost")
 	// vrednost prosledjena kao path varijabla
 	@GetMapping("workplace/{id}")
 	public ResponseEntity<Workplace> getWorkplace(@PathVariable("id") Integer id) {
@@ -264,7 +265,7 @@ public class GETRestController {
 		return new ResponseEntity<Workplace>(workplace, HttpStatus.OK);
 	}
 
-
+	@ApiOperation(value = "Vraca radna mesta iz baze podataka ciji je naziv radnog mesta zadata vrednost")
 	// prosledjena kao path varijabla
 	@GetMapping("nameofworkplace/{nameofworkplace}")
 	public Collection<Workplace> getWorkplaceByName(@PathVariable("nameofworkplace") String nameofworkplace) {

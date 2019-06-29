@@ -17,6 +17,7 @@ import delete.reps.ToothRepository;
 import delete.reps.ToothstatusRepository;
 import delete.reps.TypeofserviceRepository;
 import delete.reps.WorkplaceRepository;
+import io.swagger.annotations.ApiOperation;
 import delete.jpa.Performedservice;
 import delete.jpa.Specialty;
 import delete.jpa.Tooth;
@@ -63,7 +64,7 @@ public class DELETERestController {
 
 	// Diagnosis //
 
-
+	@ApiOperation(value = "Brisanje dijagnoza iz baze podataka")
 	@DeleteMapping("diagnosis/{id}")
 	public ResponseEntity<Diagnosis> deleteDiagnosis(@PathVariable("id") Integer id) {
 		if (!diagnosisRepository.existsById(id))
@@ -74,7 +75,7 @@ public class DELETERestController {
 
 	// Employed //
 
-
+	@ApiOperation(value = "Brisanje zaposlenih iz baze podataka")
 	@DeleteMapping("employed/{id}")
 	public ResponseEntity<Employed> deleteEmployed(@PathVariable("id") Integer id) {
 		if (!employedRepository.existsById(id))
@@ -85,7 +86,7 @@ public class DELETERestController {
 
 	// Material //
 
-
+	@ApiOperation(value = "Brisanje materijala iz baze podataka")
 	@DeleteMapping("material/{id}")
 	public ResponseEntity<Material> deleteMaterial(@PathVariable("id") Integer id) {
 		if (!materialRepository.existsById(id))
@@ -96,7 +97,7 @@ public class DELETERestController {
 
 	// Patient //
 
-
+	@ApiOperation(value = "Brisanje pacijenata iz baze podataka")
 	@DeleteMapping("patient/{id}")
 	public ResponseEntity<Patient> deletePatient(@PathVariable("id") Integer id) {
 		if (!patientRepository.existsById(id))
@@ -107,7 +108,7 @@ public class DELETERestController {
 
 	// Performedservice //
 
-
+	@ApiOperation(value = "Brisanje izvrsenih usluga iz baze podataka")
 	@DeleteMapping("performedservice/{id}")
 	public ResponseEntity<Performedservice> deletePerformedservice(@PathVariable("id") Integer id) {
 		if (!performedServiceRepository.existsById(id))
@@ -118,7 +119,7 @@ public class DELETERestController {
 
 	// Specialty //
 
-
+	@ApiOperation(value = "Brisanje specijalizacije iz baze podataka")
 	@DeleteMapping("specialty/{id}")
 	public ResponseEntity<Specialty> deleteSpecialty(@PathVariable("id") Integer id) {
 		if (!specialtyRepository.existsById(id))
@@ -130,7 +131,7 @@ public class DELETERestController {
 
 	// Tooth //
 
-
+	@ApiOperation(value = "Brisanje zuba iz baze podataka")
 	@DeleteMapping("tooth/{id}")
 	public ResponseEntity<Tooth> deleteTooth(@PathVariable("id") Integer id) {
 		if (!toothRepository.existsById(id))
@@ -141,7 +142,7 @@ public class DELETERestController {
 
 	// Toothstatus //
 
-
+	@ApiOperation(value = "Brisanje statusa zuba iz baze podataka")
 	@DeleteMapping("toothstatus/{id}")
 	public ResponseEntity<Toothstatus> deleteToothstatus(@PathVariable("id") Integer id) {
 		if (!toothStatusRepository.existsById(id))
@@ -152,7 +153,7 @@ public class DELETERestController {
 
 	// Typeofservice //
 
-
+	@ApiOperation(value = "Brisanje tipa usluge iz baze podataka")
 	@DeleteMapping("typeofservice/{id}")
 	public ResponseEntity<Typeofservice> deleteTypeofservice(@PathVariable("id") Integer id) {
 		if (!typeOfServiceRepository.existsById(id))
@@ -163,7 +164,7 @@ public class DELETERestController {
 
 	// Workplace //
 
-
+	@ApiOperation(value = "Brisanje radnog mesta iz baze podataka")
 	@DeleteMapping("workplace/{id}")
 	public ResponseEntity<Workplace> deleteWorkplace(@PathVariable("id") Integer id) {
 		if (!workplaceRepository.existsById(id))
