@@ -7,10 +7,10 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@SpringBootApplication
+@EnableSwagger2
 @EnableZuulProxy
 @EnableDiscoveryClient
-@EnableSwagger2
+@SpringBootApplication
 public class NetflixZuulEurekaDiscoveryApplication {
 
 	public static void main(String[] args) {
