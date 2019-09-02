@@ -32,7 +32,7 @@ public class Swagger {
 							"bilja.simovi@gmail.com"),
 				
 				"",
-				"");
+				"", null);
 		
 		return apiInfo;
 	}
