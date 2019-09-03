@@ -21,10 +21,10 @@ public class DocumentationController implements SwaggerResourcesProvider{
 		
 		List<SwaggerResource> resources = new ArrayList<>();
 		
-		resources.add(swaggerResource("microservice-get", "/microservice-get/v2/api-docs", "2.4.0"));
-		resources.add(swaggerResource("microservice-post", "/microservice-post/v2/api-docs", "2.4.0"));
-		resources.add(swaggerResource("microservice-put", "/microservice-put/v2/api-docs", "2.4.0"));
-		resources.add(swaggerResource("microservice-delete", "/microservice-delete/v2/api-docs", "2.4.0"));
+		resources.add(swaggerResource("microservice-get", "/microservice-get/v2/api-docs", "2.9.2"));
+		resources.add(swaggerResource("microservice-post", "/microservice-post/v2/api-docs", "2.9.2"));
+		resources.add(swaggerResource("microservice-put", "/microservice-put/v2/api-docs", "2.9.2"));
+		resources.add(swaggerResource("microservice-delete", "/microservice-delete/v2/api-docs", "2.9.2"));
 		
 		return resources;
 	}
