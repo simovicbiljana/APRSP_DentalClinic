@@ -33,7 +33,7 @@ public class Swagger {
 				"https://github.com/aprsp_dentalClinic/",
 				contact,
 				"", 
-				"");
+				"", vendorExtensions);
 
 		Docket docket = new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo).select()
 				.apis(RequestHandlerSelectors.basePackage("put")).paths(PathSelectors.any()).build();
