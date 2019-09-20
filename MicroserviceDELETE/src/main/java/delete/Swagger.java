@@ -30,7 +30,7 @@ public class Swagger {
 		ApiInfo apiInfo = new ApiInfo("Spring Boot Microservices Documentation", 
 				"This pages documents microservice endpoints", 
 				"1.0",
-				"https://github.com/aprsp_dentalClinic/",
+				"https://github.com/simovicbiljana/APRSP_DentalClinic/",
 				contact,
 				"", 
 				"", vendorExtensions);
