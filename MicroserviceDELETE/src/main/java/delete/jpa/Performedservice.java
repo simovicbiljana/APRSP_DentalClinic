@@ -10,7 +10,6 @@ import java.util.Date;
  * 
  */
 @Entity
-@NamedQuery(name="Performedservice.findAll", query="SELECT p FROM Performedservice p")
 public class Performedservice implements Serializable {
 	private static final long serialVersionUID = 1L;
 

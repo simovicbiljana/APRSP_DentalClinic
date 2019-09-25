@@ -13,7 +13,6 @@ import java.util.List;
  * 
  */
 @Entity
-@NamedQuery(name="Diagnosis.findAll", query="SELECT d FROM Diagnosis d")
 public class Diagnosis implements Serializable {
 	private static final long serialVersionUID = 1L;
 

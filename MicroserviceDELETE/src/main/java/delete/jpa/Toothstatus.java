@@ -13,7 +13,6 @@ import java.util.List;
  * 
  */
 @Entity
-@NamedQuery(name="Toothstatus.findAll", query="SELECT t FROM Toothstatus t")
 public class Toothstatus implements Serializable {
 	private static final long serialVersionUID = 1L;
 

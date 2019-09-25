@@ -13,7 +13,6 @@ import java.util.List;
  * 
  */
 @Entity
-@NamedQuery(name="Workplace.findAll", query="SELECT w FROM Workplace w")
 public class Workplace implements Serializable {
 	private static final long serialVersionUID = 1L;
 

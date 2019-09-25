@@ -9,7 +9,6 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@NamedQuery(name="Tooth.findAll", query="SELECT t FROM Tooth t")
 public class Tooth implements Serializable {
 	private static final long serialVersionUID = 1L;
 

@@ -14,7 +14,6 @@ import java.util.List;
  * 
  */
 @Entity
-@NamedQuery(name="Typeofservice.findAll", query="SELECT t FROM Typeofservice t")
 public class Typeofservice implements Serializable {
 	private static final long serialVersionUID = 1L;
 

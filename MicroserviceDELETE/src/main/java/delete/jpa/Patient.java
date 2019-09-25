@@ -14,7 +14,6 @@ import java.util.List;
  * 
  */
 @Entity
-@NamedQuery(name="Patient.findAll", query="SELECT p FROM Patient p")
 public class Patient implements Serializable {
 	private static final long serialVersionUID = 1L;
 

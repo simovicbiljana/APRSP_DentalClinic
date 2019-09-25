@@ -14,7 +14,6 @@ import java.util.List;
  * 
  */
 @Entity
-@NamedQuery(name="Employed.findAll", query="SELECT e FROM Employed e")
 public class Employed implements Serializable {
 	private static final long serialVersionUID = 1L;
 

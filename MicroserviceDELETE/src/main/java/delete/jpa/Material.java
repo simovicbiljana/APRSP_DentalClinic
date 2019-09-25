@@ -14,7 +14,6 @@ import java.util.List;
  * 
  */
 @Entity
-@NamedQuery(name="Material.findAll", query="SELECT m FROM Material m")
 public class Material implements Serializable {
 	private static final long serialVersionUID = 1L;
 
